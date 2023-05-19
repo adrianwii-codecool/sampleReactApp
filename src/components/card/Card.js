@@ -1,13 +1,15 @@
 import './Card.css'
 
-function Card(props) {
+// normal way: Card(props)
+// with destructurization: Card({student, city})
+function Card({student, city}) {
     //jsx
     return (
-        <div class="profile-card">
-        <h3>{ props.student.name }</h3>
+        <div className="profile-card">
+        <h3>{ student.name }</h3>
         <p>Front-end Developer</p>
-        <p>Location: { props.city }</p>
-        <p>Email: { props.student.email }</p>
+        <p>Location: { city }</p>
+        <p>Email: { student.email }</p>
       </div>
     )
 }
