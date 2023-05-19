@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/card/Card';
 
 function App() {
+  const city = 'Warszawa'
+
+  const student1 = {
+    name: "Adrian",
+    email: "adrian.widlak@example.com"
+  }
+
+  const student2 = {
+    name: "Zbyszek",
+    email: "zbyszek.kowalski@example.com"
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello, this is our first React App</h1>
+
+      <div className='cards'>
+        <Card student={student1} city={city}></Card>
+        <Card student={student2} city={city}></Card>
+      </div>
     </div>
   );
 }
